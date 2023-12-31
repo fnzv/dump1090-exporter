@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 # create the app user
 RUN addgroup -S d1090exp && adduser -S d1090exp -G d1090exp
 
-COPY ./dist/dump1090exporter-*-py3-none-any.whl /tmp/
+#COPY ./dist/dump1090exporter-*-py3-none-any.whl /tmp/
 
 # install dump1090exporter (including dependencies and requirements)
 RUN \
