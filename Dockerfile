@@ -16,10 +16,11 @@ RUN addgroup -S d1090exp && adduser -S d1090exp -G d1090exp
 RUN \
   apk update && \
   apk add --no-cache --virtual .build-deps musl-dev gcc && \
-  pip install pip -U --no-cache-dir && \
-  pip install /tmp/dump1090exporter-*-py3-none-any.whl --no-cache-dir && \
-  apk --purge del .build-deps && \
-  rm -rf /tmp/dump1090exporter-*-py3-none-any.whl
+#  pip install pip -U --no-cache-dir && \
+  pip install dump1090exporter
+#  pip install /tmp/dump1090exporter-*-py3-none-any.whl --no-cache-dir && \
+#  apk --purge del .build-deps && \
+#  rm -rf /tmp/dump1090exporter-*-py3-none-any.whl
 
 # switch to non-root user
 USER d1090exp
